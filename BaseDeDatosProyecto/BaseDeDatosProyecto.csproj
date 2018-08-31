@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B2376E42-2BF4-4B91-9B8B-40D5692E622E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BaseDeDatosProyecto</RootNamespace>
+    <AssemblyName>BaseDeDatosProyecto</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Michel\Desktop\Hola\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>9B3AB615AB3FC7C2442401FCE381E99A78A2FDD6</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>BaseDeDatosProyecto_ClaveTemporal.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Npgsql">
+      <HintPath>..\packages\Npgsql.3.1.8\lib\net45\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\Arma.cs" />
+    <Compile Include="Clases\Bicho.cs" />
+    <Compile Include="Clases\Entrada.cs" />
+    <Compile Include="Clases\EstadoJuego.cs" />
+    <Compile Include="Clases\Inventario.cs" />
+    <Compile Include="Clases\InvGuardaArmas.cs" />
+    <Compile Include="Clases\InvGuardaBotas.cs" />
+    <Compile Include="Clases\InvGuardaCascos.cs" />
+    <Compile Include="Clases\InvGuardaGuantes.cs" />
+    <Compile Include="Clases\InvGuardaObjEsp.cs" />
+    <Compile Include="Clases\InvGuardaPantalon.cs" />
+    <Compile Include="Clases\InvGuardaPecheras.cs" />
+    <Compile Include="Clases\InvGuardaPociones.cs" />
+    <Compile Include="Clases\MetodosGenerales.cs" />
+    <Compile Include="Clases\NPC.cs" />
+    <Compile Include="Clases\ConexionPostgreSQL.cs" />
+    <Compile Include="Clases\GeneradorMundos.cs" />
+    <Compile Include="Clases\Mundo.cs" />
+    <Compile Include="Clases\Personaje.cs" />
+    <Compile Include="Clases\Pocion.cs" />
+    <Compile Include="Clases\PocionMana.cs" />
+    <Compile Include="Clases\PocionVida.cs" />
+    <Compile Include="Clases\Skill.cs" />
+    <Compile Include="Clases\TipoDeBicho.cs" />
+    <Compile Include="Clases\TipoPersonaje.cs" />
+    <Compile Include="Clases\Usuario.cs" />
+    <Compile Include="Controladores\ControladorArmas.cs" />
+    <Compile Include="Controladores\ControladorBichos.cs" />
+    <Compile Include="Controladores\ControladorEntradas.cs" />
+    <Compile Include="Controladores\ControladorInvGuardaArmas.cs" />
+    <Compile Include="Controladores\ControladorInvGuardaBotas.cs" />
+    <Compile Include="Controladores\ControladorInvGuardaCasco.cs" />
+    <Compile Include="Controladores\ControladorInvGuardaGuantes.cs" />
+    <Compile Include="Controladores\ControladorInvGuardaObjEsp.cs" />
+    <Compile Include="Controladores\ControladorInvGuardaPantalones.cs" />
+    <Compile Include="Controladores\ControladorInvGuardaPecheras.cs" />
+    <Compile Include="Controladores\ControladorInvGuardaPociones.cs" />
+    <Compile Include="Controladores\ControladorMundos.cs" />
+    <Compile Include="Controladores\ControladorNPC.cs" />
+    <Compile Include="Controladores\ControladorObjeto.cs" />
+    <Compile Include="Controladores\ControladorPersonajeASkills.cs" />
+    <Compile Include="Controladores\ControladorTipoPersonajes.cs" />
+    <Compile Include="Controladores\Helpers.cs" />
+    <Compile Include="Controladores\ControladorPersonajes.cs" />
+    <Compile Include="Controladores\ControladorUsuarios.cs" />
+    <Compile Include="Clases\VarGlobal.cs" />
+    <Compile Include="Forms\Acceso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Acceso.Designer.cs">
+      <DependentUpon>Acceso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrador.Designer.cs">
+      <DependentUpon>Administrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Crear personaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Crear personaje.Designer.cs">
+      <DependentUpon>Crear personaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Eleccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Eleccion.Designer.cs">
+      <DependentUpon>Eleccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Juego.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Juego.Designer.cs">
+      <DependentUpon>Juego.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Puntajes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Puntajes.Designer.cs">
+      <DependentUpon>Puntajes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\Registro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Registro.Designer.cs">
+      <DependentUpon>Registro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\Acceso.resx">
+      <DependentUpon>Acceso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administrador.resx">
+      <DependentUpon>Administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Crear personaje.resx">
+      <DependentUpon>Crear personaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Eleccion.resx">
+      <DependentUpon>Eleccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Juego.resx">
+      <DependentUpon>Juego.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Puntajes.resx">
+      <DependentUpon>Puntajes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Registro.resx">
+      <DependentUpon>Registro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="BaseDeDatosProyecto_ClaveTemporal.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
